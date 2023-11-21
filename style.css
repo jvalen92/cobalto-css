@@ -1,0 +1,225 @@
+*{
+  text-decoration: none;
+  margin: 0px;  
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+#contenedor{
+    width: 98%;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid rgba(209, 189, 189, 0.815);
+    box-shadow: 0px 0px 10px #cccccc;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    min-height: 600px;
+}
+
+#cabecera{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    height: 120px;
+    border-bottom: 1px solid rgba(209, 189, 189, 0.815);
+}
+
+.logo{
+    flex-grow: 1;
+    flex-basis: 60%;
+    padding: 10px;
+    margin-left: 20px;
+    color: black;
+    text-shadow: 1px 1px 0px #cccccc;
+}
+
+.logo h1{
+    font-family: Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+#menu{
+    flex-grow: 1;
+    flex-basis: 35%;
+    height: 100%;
+    padding-right: 20px;
+}
+
+#menu > ul {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+#menu a{
+    text-transform: uppercase;
+    color: #cccccc;
+    padding: 10px;
+    transition: all 0.3s;
+
+
+}
+
+#menu a:hover{
+    background: #ccc;
+    color: white;
+}
+
+#contenido{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#proyectos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 80%;
+}
+
+
+
+.proyecto img{
+    width: 100%;
+}
+
+.info-proyecto a{
+    font-size: 16px;
+    color: black;
+    transition: all 0.3s;
+}
+
+.info-proyecto a:hover{
+    color: green
+}
+
+.info-proyecto p{
+    font-size: 16px;
+    color: grey;
+}
+
+#barra{
+    flex-basis: 15%;
+    margin-right: 30px;
+    padding: 15px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#barra h2{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 100;
+    color: #444;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(228, 218, 218);
+    text-align: center;
+}
+
+#barra ul{
+    list-style: none;
+}
+
+#barra ul li{
+    padding-bottom: 20px;
+}
+
+#barra a{
+    display: block;
+    padding: 20px;
+    background: #eee;
+    color: #444;
+    text-align: center;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+#barra a:hover{
+    background: #444;
+    color: #ccc;
+}
+
+#pie{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: 120px;
+    align-items: center;
+    border-top: 1px solid rgba(209, 189, 189, 0.815);
+}
+
+#pie h1{
+    color: rgba(95, 92, 92, 0.822);
+}
+
+.info {
+    padding-right: 25px;
+}
+
+.info p{
+    margin-right: 10px;
+}
+
+@media (max-width: 1224px){
+
+    #cabecera{
+        text-align: center;
+    }
+
+    #menu > ul{
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 646px){
+
+    #pie .logo{
+        flex-grow: 1;
+        order: 1;
+        color: #444;
+        text-align: center;
+        margin: 0px;
+    }
+
+    #pie .info{
+        flex-grow: 1;
+        order: 2;
+        margin-left: 20px;
+        color: #444;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    #contenido{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #barra{
+        margin-right: 0px;
+    }
+
+    .proyecto{
+        margin-left: 15px;
+        margin-right: 15px;
+
+        flex-basis: 100%;
+
+    }
+}
